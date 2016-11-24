@@ -2,6 +2,7 @@
 @import "variables";
 @import "normalize";
 @import "sidebar";
+@import "index";
 
 body {
   font-weight: 400;
@@ -9,6 +10,7 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   color: #3d5867;
+  background: #adcfdb;
   padding-top: 40px;
   font-size: 1em;
   text-align: center;
@@ -20,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
   margin-bottom: .5em;
   line-height: 1.2em;
-  color: $maroon;
+  color: 333;
   letter-spacing: $heading-letter-spacing;
 }
 

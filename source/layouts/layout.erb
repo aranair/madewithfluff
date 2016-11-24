@@ -17,17 +17,7 @@
   <body class="<%= page_classes %>">
 
     <div id="wrapper">
-      <div id="sidebar-wrapper">
-        <div class="logo">
-          <%= image_tag "madewithfluff-logo.png" %>
-        </div>
-
-        <ul class="sidebar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Cards</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
+      <%= partial "sidebar" %>
       <div id="page-content-wrapper">
         <div class="page-content">
           <div class="container">
