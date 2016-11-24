@@ -49,10 +49,16 @@ configure :build do
   set :js_dir, 'javascripts'
   set :images_dir, 'images'
   set :fonts_dir, 'webfonts'
+  activate :directory_indexes
   activate :sprockets
 end
 
 activate :deploy do |deploy|
+  set :css_dir, 'stylesheets'
+  set :js_dir, 'javascripts'
+  set :images_dir, 'images'
+  set :fonts_dir, 'webfonts'
+
   deploy.deploy_method = :git
   deploy.branch = 'gh-pages'
   deploy.build_before = true
