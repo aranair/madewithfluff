@@ -2,6 +2,7 @@
 # Page options, layouts, aliases and proxies
 ###
 
+
 # Per-page layout changes:
 #
 # With no layout
@@ -20,7 +21,14 @@ page '/*.txt', layout: false
 
 # Reload the browser automatically whenever files change
 configure :development do
+  activate :directory_indexes
   activate :livereload
+  activate :sprockets
+
+  set :css_dir, 'stylesheets'
+  set :js_dir, 'javascripts'
+  set :images_dir, 'images'
+  set :fonts_dir, 'webfonts'
 end
 
 ###
@@ -34,11 +42,18 @@ end
 #   end
 # end
 
+
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
+  set :css_dir, 'stylesheets'
+  set :js_dir, 'javascripts'
+  set :images_dir, 'images'
+  set :fonts_dir, 'webfonts'
+  activate :sprockets
+end
 
-  # Minify Javascript on build
-  # activate :minify_javascript
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
 end
