@@ -1,25 +1,44 @@
-.index--content-container {
-  margin-top: 20vh;
+@import 'fonts';
+
+.index-mid {
+  margin-top: 10vh;
+  width: 100%;
+}
+
+h1.index-mid--header {
+  font-family: 'Dancing Script', cursive;
+}
+
+.index-mid--slogan {
+  font-family: 'Delius Unicase', helvetica, arial;
+}
+
+.index-mid--smalltext {
+  font-family: 'Ubuntu Condensed', helvetica, arial;
+}
+
+.text-italic {
+  font-style: italic;
 }
 
 .cotton {
   position: absolute;
   bottom: 0px;
-  left: 50%;
+  left: 20%;
   background-image: url('/images/cotton.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 500px;
-  height: 500px;
+  height: 700px;
+  width: 700px;
   z-index: 2; 
 }
 
-.cotton-bg {
+.spotlight {
   position: absolute;
   top: -700px;
-  left: 20%;
   width: 1000px;
   height: 1000px;
+
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+3,0+100 */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 3%, rgba(255,255,255,0) 60%); /* FF3.6-15 */
   background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 3%, rgba(255,255,255,0) 60%); /* Chrome10-25,Safari5.1-6 */
@@ -37,4 +56,18 @@
   background-repeat: no-repeat;
   width: 500px;
   height: 500px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .cotton {
+    left: 50%;
+  }
+
+  .index-mid {
+    margin-top: 15vh;
+  }
+
+  .spotlight {
+    left: 20%;
+  }
 }
