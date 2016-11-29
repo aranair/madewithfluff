@@ -1,5 +1,9 @@
 @import 'fonts';
 
+body {
+  overflow: hidden;
+}
+
 .index-mid {
   margin-top: 10vh;
   width: 100%;
@@ -7,6 +11,7 @@
 
 h1.index-mid--header {
   font-family: 'Dancing Script', cursive;
+  font-size: 4em;
 }
 
 .index-mid--slogan {
@@ -17,6 +22,19 @@ h1.index-mid--header {
   font-family: 'Ubuntu Condensed', helvetica, arial;
 }
 
+.index-mid--smallertext {
+  font-family: 'Ubuntu Condensed', helvetica, arial;
+}
+
+.index-mid--raised {
+  background-image: url('/images/amount-raised.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  margin: auto;
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -24,43 +42,61 @@ h1.index-mid--header {
 .cotton {
   position: absolute;
   bottom: 0px;
-  left: 20%;
+  left: 35%;
+  height: 300px;
+  width: 400px;
   background-image: url('/images/cotton.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 700px;
-  width: 700px;
   z-index: 2; 
 }
 
 .spotlight {
   position: absolute;
-  top: -700px;
-  width: 1000px;
-  height: 1000px;
+  top: -270px;
+  width: 400px;
+  height: 400px;
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+3,0+100 */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 3%, rgba(255,255,255,0) 60%); /* FF3.6-15 */
   background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 3%, rgba(255,255,255,0) 60%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 3%, rgba(255,255,255,0) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  z-index: 1;
+  z-index: -1;
 }
 
 .flooofy {
   position: absolute;
-  bottom: 150px;
+  bottom: 0px;
   left: 0px;
-  background-image: url('/images/flooofy3.png');
+  background-image: url('/images/fatfat5.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
+}
+
+@media (min-width: $screen-xs-min) {
+  .cotton {
+    left: 40%;
+    height: 500px;
+    width: 500px;
+  }
+
+  .index-mid {
+    margin-top: 15vh;
+  }
+
+  .spotlight {
+    left: 20%;
+  }
 }
 
 @media (min-width: $screen-sm-min) {
   .cotton {
     left: 50%;
+    height: 700px;
+    width: 700px;
   }
 
   .index-mid {
